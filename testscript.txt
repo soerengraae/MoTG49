@@ -1,0 +1,52 @@
+# G49 MoT System Device demonstrations
+
+# Digital to Analog Device demonstration
+# Command ':0100FF' initializes the DAC device. Hit 'Enter' to send the command.
+:0100FF
+# Command ':01015505A4' outputs a constant 1.1V. Hit 'Enter' to send the command.
+:01015505A4
+# Command ':0102F401D0075505FF0FC9' outputs a pulse with delay 0.5 seconds, duration 2.0 seconds, low voltage 1.1V, high voltage 3.3V. Hit 'Enter' to send the command.
+:0102F401D0075505FF0FC9
+# Command ':01030A00FF0FE4' outputs a sine wave with frequency 10 Hz and amplitude 3.3V. Hit 'Enter' to send the command.
+:01030A00FF0FE4
+# Command ':01030A00FF0FE4' will now pause the sine wave. Hit 'Enter' to send the command.
+:01030A00FF0FE4
+# Command ':0104FB' is skip. Hit 'Enter' to send the command.
+:0104FB
+# Command ':01010000FE' will output 0V. Hit 'Enter' to send the command.
+:01010000FE
+# DAC Device demonstration is done.
+
+# Timer Device demonstration
+# Command ':0200FE' initializes the Timer device. Hit 'Enter' to send the command.
+:0200FE
+# Command ':0201E803B80B4F' outputs a pulse with delay 1 second and duration 3 seconds. Hit 'Enter' to send the command.
+:0201E803B80B4F
+# Command ':0202E803B80B4E' outputs a stream of pulses with delay 1 second and duration 3 seconds. Hit 'Enter' to send the command.
+:0202E803B80B4E
+# Command ':0203FB' is skip. Hit 'Enter' to send the command.
+:0203FB
+# Timer Device demonstration is done.
+
+# Serial Peripheral Interface Device demonstration
+# Command ':0300FD' initializes the SPI device. Hit 'Enter' to send the command.
+:0300FD
+# Command ':0301FC' performs a WHOAMI check. We expect to read 0xEF. Hit 'Enter' to send the command.
+:0301FC
+# Command ':0303000000FA' reads the byte at address 0x000000. Result is unknown. Hit 'Enter' to send the command.
+:0303000000FA
+# Command ':0302000000FB' erases one whole block (64 KB) of memory starting at address 0x000000 (Block 0). Hit 'Enter' to send the command.
+:0302000000FB
+# Command ':0303000000FA' reads the byte at address 0x000000. We expect to read 0xFF. Hit 'Enter' to send the command.
+:0303000000FA
+# Command ':030402000000AABB92' writes two bytes (0xAA and 0xBB) at address 0x000000 (Block 0). Hit 'Enter' to send the command.
+:030402000000AABB92
+# Command ':0303000000FA' reads the byte at address 0x000000. We expect to read 0xAA. Hit 'Enter' to send the command.
+:0303000000FA
+# Command ':0303000001F9' reads the byte at address 0x000001. We expect to read 0xBB because the Write command propagates the next byte to the next address. Hit 'Enter' to send the command.
+:0303000001F9
+# Command ':030401000000FDFB' writes one byte (0xFD) at address 0x000000 (Block 0). Hit 'Enter' to send the command.
+:030401000000FDFB
+# Command ':0303000000FA' reads the byte at address 0x000000. We expect to read 0xA8 (0xAA AND 0xFD). Hit 'Enter' to send the command.
+:0303000000FA
+# Serial Peripheral Interface Device demonstration is done.

@@ -1,0 +1,40 @@
+In archive libSystemClock_STM32G491.a:
+
+SystemClock_init2.o:     file format elf32-littlearm
+
+SYMBOL TABLE:
+00000000 g     F .text	00000000 SystemClock_init2
+00000000 g       .data	00000000 SysTick_ReloadValue
+00000004 g       .data	00000000 SystemCoreClock
+
+
+
+SysTick_definitions.o:     file format elf32-littlearm
+
+SYMBOL TABLE:
+00000080 l       *ABS*	00000000 SYSTICK_PRI
+e000ed10 l       *ABS*	00000000 SCR
+e000ed14 l       *ABS*	00000000 CCR
+e000ed18 l       *ABS*	00000000 SHPR1
+e000ed1c l       *ABS*	00000000 SHPR2
+e000ed20 l       *ABS*	00000000 SHPR3
+e000ed24 l       *ABS*	00000000 SHCSR
+e000e010 l       *ABS*	00000000 SYST_CSR
+e000e014 l       *ABS*	00000000 SYST_RVR
+e000e018 l       *ABS*	00000000 SYST_CVR
+e000e01c l       *ABS*	00000000 SYST_CALIB
+e000ed04 l       *ABS*	00000000 ICSR
+0000001c l       *ABS*	00000000 PENDSVSET
+0000001b l       *ABS*	00000000 PENDSVCLR
+e000ed23 l       *ABS*	00000000 SysTick_PR
+e000ed22 l       *ABS*	00000000 PendSV_PR
+e000ed1f l       *ABS*	00000000 SvcHandler_PR
+0000007e l       .text	00000000 SysTick_Handler_exit
+00000000  w      .bss	00000000 SysTick_absmsecs
+00000008  w      .bss	00000000 SysTick_msecs
+0000000c  w      .bss	00000000 SysTick_secs
+00000000 g     F .text	00000000 SysTick_init
+00000000         *UND*	00000000 SysTick_ReloadValue
+00000038 g     F .text	00000000 SysTick_Handler
+
+
